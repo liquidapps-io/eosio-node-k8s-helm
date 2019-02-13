@@ -1,4 +1,6 @@
-# Deploying a full EOS Node
+# Deploying a EOSIO mainnet API node
+
+Sets up a full EOSIO node. and syncs from the latest available blocks log backup.
 
 ## Getting started
 ### AWS
