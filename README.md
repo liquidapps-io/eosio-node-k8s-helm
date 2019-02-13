@@ -1,6 +1,6 @@
 # Deploying a EOSIO mainnet API node
 
-Sets up a full EOSIO node. and syncs from the latest available blocks log backup.
+Sets up a full EOSIO node and syncs from the latest available blocks log backup and snapshot.
 
 ## Getting started
 ### AWS
