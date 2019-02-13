@@ -31,7 +31,7 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 ```
 wget https://raw.githubusercontent.com/liquidapps-io/eosio-node-k8s-helm/master/values.yaml -O eosnode-config.yaml
 # edit eosnode-config.yaml
-helm install -f eosnode-config.yaml eosnode
+helm install -f eosnode-config.yaml liquidapps/eosnode
 
 ```
 
