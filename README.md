@@ -19,6 +19,7 @@ sudo snap install helm --classic
 Run:
 ```
 helm init
+helm repo add liquidapps https://s3-us-west-2.amazonaws.com/liquidapps-helm-charts/
 helm update repo
 
 kubectl create serviceaccount --namespace kube-system tiller 
@@ -26,16 +27,11 @@ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admi
 kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
 ```
-### Setup dashboard
+### Install EOSIO node helm chart
 ```
-helm install stable/kubernetes-dashboard
-```
-### Install DAPP-DSP helm chart
-```
-wget https://.../charts/eosnode-config.yaml
-helm dependency update
-helm install -f eosnode-config.yaml https://.../charts/eosnode.tgz
-
+wget https://raw.githubusercontent.com/liquidapps-io/eosio-node-k8s-helm/master/values.yaml -O eosnode-config.yaml
+# edit eosnode-config.yaml
+helm install -f eosnode-config.yaml eosnode
 
 ```
 
