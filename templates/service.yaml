@@ -16,6 +16,10 @@ spec:
 {{- end }}
 {{- end }}
   ports:
+    - port: 5557
+      targetPort: 5557
+      protocol: TCP
+      name: q2
     - port: {{ .Values.service.port }}
       targetPort: 8888
       protocol: TCP
