@@ -43,3 +43,7 @@ Or restore from full backup and replay:
 ```bash
 helm install --set snapshot=true --set replay=true .
 ```
+Or resume after first restore:
+```bash
+helm install .
+```
