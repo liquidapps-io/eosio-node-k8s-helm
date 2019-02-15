@@ -29,17 +29,17 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 
 ```
 ### Install the EOSIO node helm chart
-
-### Restore from snapshot
 ```bash
 git clone https://github.com/liquidapps-io/eosio-node-k8s-helm.git
 cd eosio-node-k8s-helm
-helm install --set snapshot=true --set replay=true .
 ```
 
-### Restore from full backup and replay
+### Run
+Restore from snapshot:
 ```bash
-git clone https://github.com/liquidapps-io/eosio-node-k8s-helm.git
-cd eosio-node-k8s-helm
+helm install --set snapshot=true --set replay=true .
+```
+Or restore from full backup and replay:
+```bash
 helm install --set snapshot=true .
 ```
