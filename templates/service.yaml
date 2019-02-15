@@ -21,7 +21,7 @@ spec:
       protocol: TCP
       name: api
     - port: {{ .Values.service.qport }}
-      targetPort: 5556
+      targetPort: {{ .Values.service.qport }}
       protocol: TCP
       name: queue
     - port: {{ .Values.service.pport }}

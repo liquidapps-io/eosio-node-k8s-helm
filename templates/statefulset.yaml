@@ -54,8 +54,13 @@ spec:
           ports:
             - containerPort: 8888
               protocol: TCP
+              name: api
             - containerPort: 9876
               protocol: TCP
+              name: p2p
+            - containerPort: {{ .Values.service.qport }}
+              protocol: TCP
+              name: queue
           readinessProbe:
             httpGet:
               path: /v1/chain/get_info
