@@ -28,7 +28,7 @@ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admi
 kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 
 ```
-### Install the EOSIO node helm chart
+### Clone the EOSIO node helm chart
 ```bash
 git clone https://github.com/liquidapps-io/eosio-node-k8s-helm.git
 cd eosio-node-k8s-helm
