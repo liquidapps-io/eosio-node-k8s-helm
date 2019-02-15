@@ -32,6 +32,7 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 ```bash
 git clone https://github.com/liquidapps-io/eosio-node-k8s-helm.git
 cd eosio-node-k8s-helm
+helm dependency update
 ```
 
 ### Run
