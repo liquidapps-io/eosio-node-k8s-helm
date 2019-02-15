@@ -37,9 +37,9 @@ cd eosio-node-k8s-helm
 ### Run
 Restore from snapshot:
 ```bash
-helm install --set snapshot=true --set replay=true .
+helm install --set snapshot=true .
 ```
 Or restore from full backup and replay:
 ```bash
-helm install --set snapshot=true .
+helm install --set snapshot=true --set replay=true .
 ```
