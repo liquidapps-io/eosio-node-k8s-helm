@@ -14,7 +14,7 @@ service:
   port: 8888
   qport: 5556
   pport: 9876
-  type: LoadBalancer
+  type: NodePort
   loadBalancerSourceRanges: "0.0.0.0/0"
  
 # The argument passed to nodeos 
