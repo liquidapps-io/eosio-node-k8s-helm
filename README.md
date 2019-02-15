@@ -42,7 +42,7 @@ helm install --set snapshot=true . --name nodeos
 ```
 Or restore from full backup and replay:
 ```bash
-helm install --set snapshot=true --set replay=true . --name nodeos
+helm install --set replay=true . --name nodeos
 ```
 Or resume after first restore:
 ```bash
