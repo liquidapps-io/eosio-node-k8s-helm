@@ -20,7 +20,7 @@ spec:
         app: nodeos
         release: {{ .Release.Name }}
     spec:
-      terminationGracePeriodSeconds: 120
+      terminationGracePeriodSeconds: 60
       initContainers:
         - name: init-data
           image: liquidapps/eosio-mainnet-loader
