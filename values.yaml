@@ -153,11 +153,13 @@ args:
   - --actor-blacklist=whitegroupes
   - --actor-blacklist=24cryptoshop
   - --actor-blacklist=minedtradeos  
+  - --plugin=eosio::zmq_plugin
+  - --zmq-publisher-bind=tcp://0.0.0.0:5557
+
 moreargs:
   - --chain-state-db-size-mb=786432 
   - --reversible-blocks-db-size-mb=2048
   - --max-clients=150
-  - --http-server-address=0.0.0.0:8888 
   - --http-validate-host=false 
   - --force-all-checks
   - --disable-replay-opts
