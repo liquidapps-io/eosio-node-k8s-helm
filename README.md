@@ -21,7 +21,6 @@ sudo snap install helm --classic
 Run:
 ```
 helm init
-helm repo add liquidapps https://s3-us-west-2.amazonaws.com/liquidapps-helm-charts/
 helm update repo
 
 kubectl create serviceaccount --namespace kube-system tiller 
@@ -31,9 +30,9 @@ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"templat
 ```
 ### Install the EOSIO node helm chart
 ```
-wget https://raw.githubusercontent.com/liquidapps-io/eosio-node-k8s-helm/master/values.yaml -O eosnode-config.yaml
-# edit eosnode-config.yaml
-helm install -f eosnode-config.yaml liquidapps/eosnode
+git clone https://github.com/liquidapps-io/eosio-node-k8s-helm.git
+cd eosio-node-k8s-helm
+helm install --set snapshot=true --set replay=true .
 
 ```
 

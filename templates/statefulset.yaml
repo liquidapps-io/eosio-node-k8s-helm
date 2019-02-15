@@ -50,7 +50,7 @@ spec:
           command:
             - bash
             - -ec
-            - nodeos {{- if .Values.snapshot }} --snapshot=/eos.data/snapshots/latest {{- end }} {{ include "eosnode.nodeargs" . }} {{ include "eosnode.morenodeargs" . }}
+            - nodeos {{- if .Values.snapshot }} --snapshot=/eos.data/snapshots/latest {{- end }} {{ include "eosnode.nodeargs" . }} {{ include "eosnode.morenodeargs" . }} {{- if .Values.replay }} --hard-replay {{- end }}
           ports:
             - containerPort: 8888
               protocol: TCP

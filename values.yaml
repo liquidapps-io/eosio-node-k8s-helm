@@ -164,9 +164,11 @@ moreargs:
   - --max-transaction-time=5000
   - --abi-serializer-max-time-ms=15000
 
-snapshot: true
+snapshot: false
 download: false
-clear: true
+clear: false
+replay: false
+
 persistence:
   enabled: true
   # storageClass: "-"
