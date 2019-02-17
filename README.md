@@ -1,6 +1,6 @@
 # EOSIO Mainnet full node deployment using K8s and helm
 
-Sets up a full EOSIO node and syncs from the latest available blocks log backup and snapshot.
+Sets up a full EOSIO node and syncs from the latest available blocks log backup and snapshot. (using https://github.com/liquidapps-io/docker-eosio-nodeos-plugins)
 
 ## Getting started
 ### AWS
