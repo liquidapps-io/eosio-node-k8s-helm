@@ -2,7 +2,7 @@
 
 Sets up a full EOSIO node and syncs from the latest available blocks log backup and snapshot.
 
-Using:
+This chart is using:
  - https://github.com/liquidapps-io/docker-eosio-nodeos-plugins
  - https://github.com/liquidapps-io/docker-eosio-mainnet-loader
 
