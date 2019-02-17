@@ -18,12 +18,12 @@ spec:
   ports:
     - port: 5557
       targetPort: 5557
-      nodePort: 35557
+      nodePort: 30557
       protocol: TCP
       name: q2
     - port: {{ .Values.service.port }}
       targetPort: 8888
-      nodePort: 38888
+      nodePort: 30888
       protocol: TCP
       name: api
     - port: {{ .Values.service.qport }}
