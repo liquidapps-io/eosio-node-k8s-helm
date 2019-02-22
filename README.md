@@ -18,19 +18,14 @@ https://cloud.google.com/kubernetes-engine/docs/quickstart
 
 Download client from: https://docs.helm.sh/using_helm/#installing-helm
 #### Ubuntu
-```
+```bash
 sudo snap install helm --classic
 ```
 
 Run:
-```
-helm init
+```bash
+helm init --service-account tiller
 helm update repo
-
-kubectl create serviceaccount --namespace kube-system tiller 
-kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller 
-kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
-
 ```
 ### Clone the EOSIO node helm chart
 ```bash
