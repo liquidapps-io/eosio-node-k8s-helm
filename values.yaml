@@ -163,7 +163,7 @@ moreargs:
   - --http-validate-host=false 
   - --force-all-checks
   - --disable-replay-opts
-  - --max-transaction-time=5000
+  - --max-transaction-time=30000
   - --abi-serializer-max-time-ms=15000
 
 snapshot: false
